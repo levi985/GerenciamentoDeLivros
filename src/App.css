@@ -1,0 +1,375 @@
+/* ===================== VARIÁVEIS DE TEMA ===================== */
+:root {
+  /* TEMA CLARO */
+  --bg-color: #F9F7F2;
+  --card-bg: #EFECE7;
+  --text-color: #4A4A4A;
+  --text-secondary: #714329;
+  --border-color: #D089A7;
+  --accent-color: #B08463;
+  --accent-hover: #9937B;
+  --remove-color: #CC0000;
+  --remove-hover: #a30000;
+  --input-bg: #FFFFFF;
+  --input-border: #D089A7;
+  --shadow: 0 2px 8px rgba(176, 132, 99, 0.08);
+}
+
+.dark {
+  /* TEMA ESCURO */
+  --bg-color: #2D283E;
+  --card-bg: #4C495D;
+  --text-color: #D1D7E0;
+  --text-secondary: #802BB1;
+  --border-color: #564F6F;
+  --accent-color: #802BB1;
+  --accent-hover: #6C2B9A;
+  --remove-color: #FF4444;
+  --remove-hover: #d1002c;
+  --input-bg: #4C495D;
+  --input-border: #564F6F;
+  --shadow: 0 2px 12px rgba(128, 43, 177, 0.12);
+}
+
+/* ===================== RESET E BASE ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  width: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark body,
+.dark html,
+.dark #root {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===================== CONTAINER ===================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  flex: 1;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===================== CABEÇALHO ===================== */
+.header {
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--border-color);
+  padding: 22px 0;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, color 0.3s;
+}
+
+.header-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+/* ===================== BOTÕES ===================== */
+.btn {
+  padding: 10px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primario {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn-primario:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 16px var(--accent-hover);
+}
+
+.btn-secundario {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.btn-secundario:hover {
+  background: var(--accent-hover);
+}
+
+.btn-tema {
+  background: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 8px 0;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.btn-tema:hover {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-hover);
+}
+
+/* ===================== SEÇÕES ===================== */
+section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, color 0.3s;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+/* ===================== FORMULÁRIO ===================== */
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 18px;
+  align-items: end;
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grupo-input label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.input,
+.input-busca {
+  padding: 12px 16px;
+  border: 2px solid var(--input-border);
+  border-radius: 7px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border 0.3s, background 0.3s, color 0.3s;
+}
+
+.input:focus,
+.input-busca:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 6px var(--accent-color);
+}
+
+/* ===================== BUSCA ===================== */
+.secao-busca {
+  margin-bottom: 32px;
+}
+
+.input-busca {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1.05rem;
+}
+
+/* ===================== ALERTAS ===================== */
+.alerta {
+  padding: 16px 22px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  border-left: 5px solid;
+  transition: background 0.3s, color 0.3s;
+}
+
+.alerta-erro {
+  background: rgba(204, 0, 0, 0.13);
+  color: var(--remove-color);
+  border-left-color: var(--remove-color);
+}
+
+.dark .alerta-erro {
+  background: rgba(255, 68, 68, 0.13);
+  color: var(--remove-color);
+  border-left-color: var(--remove-color);
+}
+
+.alerta-info {
+  background: rgba(176, 132, 99, 0.13);
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+}
+
+.dark .alerta-info {
+  background: rgba(128, 43, 177, 0.13);
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+}
+
+.alerta-sucesso {
+  background: rgba(120, 187, 120, 0.13);
+  color: #43A047;
+  border-left-color: #43A047;
+}
+
+/* ===================== GRADE DE LIVROS ===================== */
+.grade-livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 22px;
+}
+
+/* ===================== CARTÃO DE LIVRO ===================== */
+.cartao-livro {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cartao-livro:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 24px var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.cartao-conteudo {
+  flex: 1;
+}
+
+.cartao-titulo {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.cartao-autor,
+.cartao-ano {
+  font-size: 1rem;
+  margin-bottom: 7px;
+  color: var(--text-color);
+}
+
+.cartao-autor strong,
+.cartao-ano strong {
+  color: var(--accent-color);
+}
+
+/* ===================== RODAPÉ ===================== */
+.rodape {
+  background: var(--card-bg);
+  border-top: 2px solid var(--border-color);
+  text-align: center;
+  padding: 22px;
+  margin-top: auto;
+  color: var(--accent-color);
+  font-size: 1rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 900px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .formulario {
+    grid-template-columns: 1fr 1fr auto;
+  }
+  .grade-livros {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .header-conteudo {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .btn-tema {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+  .formulario {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .grade-livros {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 12px;
+  }
+  section h2 {
+    font-size: 1.2rem;
+  }
+}

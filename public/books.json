@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+    "author": "Robert C. Martin",
+    "year": 2008
+  },
+  {
+    "id": 2,
+    "title": "O Programador Pragmático: De Aprendiz a Mestre",
+    "author": "Andrew Hunt & David Thomas",
+    "year": 1999
+  },
+  {
+    "id": 3,
+    "title": "Entendendo Algoritmos: Um Guia Ilustrado",
+    "author": "Aditya Bhargava",
+    "year": 2015
+  },
+  {
+    "id": 4,
+    "title": "Padrões de Projeto: Soluções Reutilizáveis",
+    "author": "Erich Gamma, et al.",
+    "year": 1994
+  },
+  {
+    "id": 5,
+    "title": "Domain-Driven Design: Atacando as Complexidades",
+    "author": "Eric Evans",
+    "year": 2003
+  },
+  {
+    "id": 6,
+    "title": "Refatoração: Aperfeiçoando o Design de Códigos",
+    "author": "Martin Fowler",
+    "year": 1999
+  },
+  {
+    "id": 7,
+    "title": "Arquitetura Limpa: O Guia do Artesão",
+    "author": "Robert C. Martin",
+    "year": 2017
+  },
+  {
+    "id": 8,
+    "title": "JavaScript: O Guia Definitivo",
+    "author": "David Flanagan",
+    "year": 2011
+  }
+]
